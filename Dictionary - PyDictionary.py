@@ -5,11 +5,10 @@ from tkinter import *
 
 
 def search(input): 
-	messagebox.showinfo("Meaning", pDt.meaning(input)['Noun'][0])
-	# try:
-	# 	messagebox.showinfo("Meaning ", pDt.meaning(input['Noun']))
-	# except:
-	# 	messagebox.showerror("Meaning not found", "Please type the correct dictionary word")
+	try:
+		messagebox.showinfo("Meaning", pDt.meaning(input)['Noun'][0])
+	except:
+		messagebox.showerror("Meaning not found", "Please type the correct dictionary word")
 
 root = Tk()
 root.title("Dictionary")
